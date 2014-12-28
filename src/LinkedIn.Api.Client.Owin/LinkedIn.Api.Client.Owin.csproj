@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A03F6185-7470-4895-B43A-FE8AE3F345B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinkedIn.Api.Client.Owin</RootNamespace>
+    <AssemblyName>LinkedIn.Api.Client.Owin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Binaries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\LinkedIn.Api.Client.Owin.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.7\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin.Security.Providers">
+      <HintPath>..\packages\Owin.Security.Providers.1.12.1\lib\net45\Owin.Security.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Json\JsonLinkedInBasicProfile.cs" />
+    <Compile Include="Json\JsonLinkedInCertification.cs" />
+    <Compile Include="Json\JsonLinkedInCertificationList.cs" />
+    <Compile Include="Json\JsonLinkedInCompany.cs" />
+    <Compile Include="Json\JsonLinkedInCourse.cs" />
+    <Compile Include="Json\JsonLinkedInCourseList.cs" />
+    <Compile Include="Json\JsonLinkedInDate.cs" />
+    <Compile Include="Json\JsonLinkedInEducation.cs" />
+    <Compile Include="Json\JsonLinkedInEducationList.cs" />
+    <Compile Include="Json\JsonLinkedInFullProfile.cs" />
+    <Compile Include="Json\JsonLinkedInHonorAward.cs" />
+    <Compile Include="Json\JsonLinkedInHonorAwardList.cs" />
+    <Compile Include="Json\JsonLinkedInLanguage.cs" />
+    <Compile Include="Json\JsonLinkedInLanguageInfo.cs" />
+    <Compile Include="Json\JsonLinkedInLanguageList.cs" />
+    <Compile Include="Json\JsonLinkedInLocation.cs" />
+    <Compile Include="Json\JsonLinkedInPosition.cs" />
+    <Compile Include="Json\JsonLinkedInPositionList.cs" />
+    <Compile Include="Json\JsonLinkedInRecommendation.cs" />
+    <Compile Include="Json\JsonLinkedInRecommendationList.cs" />
+    <Compile Include="Json\JsonLinkedInRecommendationType.cs" />
+    <Compile Include="Json\JsonLinkedInRecommender.cs" />
+    <Compile Include="Json\JsonLinkedInSkill.cs" />
+    <Compile Include="Json\JsonLinkedInSkillInfo.cs" />
+    <Compile Include="Json\JsonLinkedInSkillList.cs" />
+    <Compile Include="LinkedInApiClient.cs" />
+    <Compile Include="Profiles\JsonBasicProfileParser.cs" />
+    <Compile Include="Profiles\JsonProfileParser.cs" />
+    <Compile Include="Profiles\LinkedInProfileApi.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LinkedIn.Api.Client.Core\LinkedIn.Api.Client.Core.csproj">
+      <Project>{8db68d0a-bd61-4aeb-a17c-78562b2cce53}</Project>
+      <Name>LinkedIn.Api.Client.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

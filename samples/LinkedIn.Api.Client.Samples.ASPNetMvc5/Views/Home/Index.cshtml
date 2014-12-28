@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>LinkedIn APIs for .NET Sample</h1>
+    <p class="lead">LinkedIn APIs for .NET is a robust and clean library that allows a developer to easily make LinkedIn API calls in a Microsoft .NET application. This sample MVC application demonstrates how to use the library. Make sure you set the API and secret keys in the Startup class of this project.</p>
+    <p><a href="https://github.com/tanveery/linkedin-net/blob/master/README.md" target="_blank" class="btn btn-primary btn-lg">Learn more on GitHub &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <h2>How to Use this Sample?</h2>
+        <hr />
+        <h4>1. Create a LinkedIn App</h4>
+        <p>First things first! You need to create a LinkedIn app which will give you API key and secret key. Ensure that the value of the <strong>OAuth 2.0 Redirected URLs</strong> is <strong>@Request.Url.ToString()signin-linkedin</strong>.</p>
+        <h4>2. Set the API and Secret Keys in the Startup Class</h4>
+<pre>
+linkedInOptions.ClientId = "75wr7z0vfwrafp";
+linkedInOptions.ClientSecret = "z4uVOmyt8ajbJhDZ";
+</pre>
+        <h4>3. Login with your LinkedIn</h4>
+        <p>Go to <a href="@Request.Url.ToString()Account/Login">@Request.Url.ToString()Account/Login</a> and click on the <strong>LinkedIn</strong> button to login with your linkedin account.</p>
+        <h4>4. Check out the Profile Page</h4>
+        <p>Go to <a href="@Request.Url.ToString()Profile">@Request.Url.ToString()Profile</a> page to see whether the APIs are working for you. if you did everything right, you should see some of the basic information about your linkedin profile.</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Stay in Touch</h2>
+        <hr />
+        <h4>GitHub</h4>
+        <p>Follow my GitHub projects <a href="https://github.com/tanveery" target="_blank">https://github.com/tanveery</a></p>
+        <h4>Twitter</h4>
+        <p>Follow me on Twitter:</p>
+        <a href="https://twitter.com/tanveery" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @@tanveery</a>
+        <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+    </div>
+</div>

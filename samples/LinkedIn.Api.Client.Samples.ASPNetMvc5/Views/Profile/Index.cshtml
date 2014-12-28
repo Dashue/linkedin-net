@@ -1,0 +1,32 @@
+﻿@model LinkedIn.Api.Client.Core.Profiles.LinkedInFullProfile
+
+@{
+    ViewBag.Title = "LinkedIn Profile";
+}
+
+<h2>LinkedIn Profile</h2>
+<hr />
+
+@if (Model != null)
+{
+    if (!string.IsNullOrEmpty(Model.PictureUrl))
+    {
+        <p>
+            <img src="@Model.PictureUrl" />
+        </p>
+    }
+    <dl>
+        <dt>First Name</dt>
+        <dd>@Model.FirstName</dd>
+        <dt>Last Name</dt>
+        <dd>@Model.LastName</dd>
+        <dt>Summary</dt>
+        <dd>@Model.Summary</dd>
+        <dt>Interests</dt>
+        <dd>@Model.Interests</dd>
+    </dl>
+}
+else
+{
+    <p class="lead">The LinkedInFullProfile as the view's model is null.</p>
+}
