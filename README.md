@@ -78,7 +78,7 @@ if (claimsIdentity != null)
 ```
 The above code store access token in the database only if it doesn't exist for the user.
 
-<h2>Get the Profile Information</h3>
+<h2>Get Profile Information</h3>
 
 If you have followed all the above steps, it is just a matter of few lines of code to make API calls such as retrieving user's LinkedIn profile information. You need to first import two namespaces as follows:
 
